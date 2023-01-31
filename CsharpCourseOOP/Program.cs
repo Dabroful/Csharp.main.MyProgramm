@@ -46,7 +46,7 @@
 
     internal class Magazine
     {
-        public string cityOfOffice;
+        public string cityOfOffice { get; set; }
         public string webSite { get; set; }
         public int moneyInYear { get; set; }
         public int personal { get; set; }
