@@ -1,0 +1,3 @@
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.csproj.AssemblyReference.cache
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.csproj.SuggestedBindingRedirects.cache
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.csproj.CoreCompileInputs.cache

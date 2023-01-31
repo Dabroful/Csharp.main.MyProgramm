@@ -1,11 +1,13 @@
-﻿namespace CsharpCourseOOP
+﻿using System;
+
+namespace CsharpCourseOOP
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
             Notebook asus = new Notebook();
-            asus.processor = "Intel";
+            asus.processor = "Intel core i7 11800h";
             asus.ozu = 32;
             asus.videoCart = "Nvidia RTX3050Ti";
             asus.screen = 16;
