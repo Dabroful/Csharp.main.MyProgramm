@@ -4,35 +4,35 @@
     {
         public static void Main(string[] args)
         {
-            Notebook Asus = new Notebook();
-            Asus.processor = "Intel";
-            Asus.ozu = 32;
-            Asus.videoCart = "Nvidia RTX3050Ti";
-            Asus.screen = 16;
-            Asus.battery = "90Wh";
+            Notebook asus = new Notebook();
+            asus.processor = "Intel";
+            asus.ozu = 32;
+            asus.videoCart = "Nvidia RTX3050Ti";
+            asus.screen = 16;
+            asus.battery = "90Wh";
 
-            Phone Xiaomi = new Phone();
-            Xiaomi.screen = 6;
-            Xiaomi.battery = 5000;
-            Xiaomi.memory = 128;
-            Xiaomi.ozu = 4;
+            Phone xiaomi = new Phone();
+            xiaomi.screen = 6;
+            xiaomi.battery = 5000;
+            xiaomi.memory = 128;
+            xiaomi.ozu = 4;
 
-            TV Samsung = new TV();
-            TV.screen = 55;
-            TV.screenRaz = "1280x720";
+            Tv samsung = new Tv();
+            samsung.screen = 55;
+            samsung.screenRaz = "1280x720";
 
-            Magazine F5it = new Magazine();
-            F5it.personal = 150;
-            F5it.moneyInYear = 110000000;
-            F5it.webSite = "www.f5it.ru";
-            F5it.cityOfOffice = "Novosibirsk";
-            F5it.cityOfOffice = "Moscow";
+            Magazine f5it = new Magazine();
+            f5it.personal = 150;
+            f5it.moneyInYear = 110000000;
+            f5it.webSite = "www.f5it.ru";
+            f5it.cityOfOffice = "Novosibirsk";
+            f5it.cityOfOffice = "Moscow";
 
-            Garnitura Lg = new Garnitura();
-            Lg.withOutprovod = true;
-            Lg.timeOfWorking = "1 week";
-            Lg.color = "black";
-            Lg.typeOfEarsIsIneer = false;
+            Garnitura lg = new Garnitura();
+            lg.withOutprovod = true;
+            lg.timeOfWorking = "1 week";
+            lg.color = "black";
+            lg.typeOfEarsIsIneer = false;
         }
     }
 
@@ -52,10 +52,10 @@
         public int personal { get; set; }
     }
 
-    internal class TV
+    internal class Tv
     {
-        public static string screenRaz { get; set; }
-        public static int screen { get; set; }
+        public string screenRaz { get; set; }
+        public int screen { get; set; }
     }
 
     internal class Phone
