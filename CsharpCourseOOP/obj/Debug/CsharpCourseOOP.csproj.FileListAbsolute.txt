@@ -1,3 +1,7 @@
 D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.csproj.AssemblyReference.cache
 D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.csproj.SuggestedBindingRedirects.cache
 D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.csproj.CoreCompileInputs.cache
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\bin\Debug\CsharpCourseOOP.exe
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\bin\Debug\CsharpCourseOOP.pdb
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.exe
+D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\obj\Debug\CsharpCourseOOP.pdb

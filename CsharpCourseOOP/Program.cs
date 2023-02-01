@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CsharpCourseOOP
 {
     public class Program
     {
-        public void Main(string[] args)
+        public static void Main(string[] args)
         {
             var asus = new Notebook();
             asus.processor = "Intel core i7 11800h";
@@ -40,7 +41,7 @@ namespace CsharpCourseOOP
             lg.typeOfEarsIsIneer = false;
             lg.price = 2500;
 
-            int stockPrice(int nbCount, int phoneCount, int tvCount, int earsCount)
+            int stockPrice1(int nbCount, int phoneCount, int tvCount, int earsCount)
             {
                 int totalPrice = 0;
                 int nbPrice = asus.price * nbCount;
@@ -51,13 +52,26 @@ namespace CsharpCourseOOP
                 return totalPrice;
             }
 
-            int januaryDate30012023 = stockPrice(17, 50, 25, 30);
+            var firstStockAdding = stockPrice1(15, 45, 30, 50);
+            Console.WriteLine($"На склад поступило товара на сумму {firstStockAdding} рублей");
 
-            Console.WriteLine(januaryDate30012023);
-            Console.ReadLine();
+            var acer = new Notebook();
+            acer.processor = "Intel core i5";
+            acer.ozu = 8;
+            acer.price = 74900;
+
+            int stockPrice2(int nbCount)
+            {
+                int totalPrice = 0;
+                int nbPrice = acer.price * nbCount;
+                totalPrice += nbPrice;
+                return totalPrice;
+            }
+
+            var secondStockAdding = stockPrice2(78);
+            var allStockMoney = firstStockAdding + secondStockAdding;
+            Console.WriteLine($"второе поступление товара на склад на сумму {secondStockAdding}. Теперь на складе товара в сумме на {allStockMoney}");
         }
-
-
     }
 
     internal class Garnitura
