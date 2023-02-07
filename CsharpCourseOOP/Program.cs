@@ -7,7 +7,7 @@ namespace CsharpCourseOOP
     {
         public static void Main(string[] args)
         {
-            var asus = new Notebook();
+            var asus = new Notebook<int>();
             asus.processor = "Intel core i7 11800h";
             asus.ozu = 32;
             asus.videoCart = "Nvidia RTX3050Ti";
@@ -55,7 +55,7 @@ namespace CsharpCourseOOP
             var firstStockAdding = stockPrice1(15, 45, 30, 50);
             Console.WriteLine($"На склад поступило товара на сумму {firstStockAdding} рублей");
 
-            var acer = new Notebook();
+            var acer = new Notebook<int>();
             acer.processor = "Intel core i5";
             acer.ozu = 8;
             acer.price = 74900;
@@ -67,14 +67,14 @@ namespace CsharpCourseOOP
                 totalPrice += nbPrice;
                 return totalPrice;
             }
-
             var secondStockAdding = stockPrice2(78);
+            
             var allStockMoney = firstStockAdding + secondStockAdding;
             Console.WriteLine($"второе поступление товара на склад на сумму {secondStockAdding}. Теперь на складе товара в сумме на {allStockMoney}");
         }
     }
 
-    internal class Garnitura
+    public class Garnitura
     {
         public int price { set; get; }
         public bool typeOfEarsIsIneer { get; set; }
@@ -83,7 +83,7 @@ namespace CsharpCourseOOP
         public bool withOutprovod { get; set; }
     }
 
-    internal class Magazine
+    public class Magazine
     {
         public string cityOfOffice { get; set; }
         public string webSite { get; set; }
@@ -91,14 +91,14 @@ namespace CsharpCourseOOP
         public int personal { get; set; }
     }
 
-    internal class Tv
+    public class Tv
     {
         public int price { get; set; }
         public string screenRaz { get; set; }
         public int screen { get; set; }
     }
 
-    internal class Phone
+    public class Phone
     {
         public int price { set; get; }
         public int memory { get; set; }
@@ -107,14 +107,15 @@ namespace CsharpCourseOOP
         public int battery { get; set; }
     }
 
-    internal class Notebook
+    public class Notebook<T>
     {
         public int price { get; set; }
-        public int screen { get; set; }
+        public T screen { get; set; }
         public string battery { get; set; }
         public string videoCart { get; set; }
         public int ozu { get; set; }
         public string processor { get; set; }
     }
+  
 }
 
