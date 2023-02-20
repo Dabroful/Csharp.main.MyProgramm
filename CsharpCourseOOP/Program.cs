@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CsharpCourseOOP
 {
@@ -51,8 +55,8 @@ namespace CsharpCourseOOP
                 totalPrice = nbPrice + phonePrice + tvPrice + earsPrice;
                 return totalPrice;
             }
-
-            var firstStockAdding = stockPrice1(15, 45, 30, 50);
+            
+            int firstStockAdding = stockPrice1(15, 45, 30, 50);
             Console.WriteLine($"На склад поступило товара на сумму {firstStockAdding} рублей");
 
             var acer = new Notebook<int>();
@@ -67,10 +71,33 @@ namespace CsharpCourseOOP
                 totalPrice += nbPrice;
                 return totalPrice;
             }
-            var secondStockAdding = stockPrice2(78);
+            int secondStockAdding = stockPrice2(78);
+
+            string allStockMoney()
+            {
+                Console.WriteLine($"второе поступление товара на склад на сумму {secondStockAdding}.");
+                int result = firstStockAdding + secondStockAdding;
+                string x = $"второе поступление товара на склад на сумму {secondStockAdding}. теперь на складе {result} товара";
+                return x;
+            }
+
+            void SaveFileResult()
+            {
+                using (var sw = new StreamWriter(@"D:\Разработка\C#\CsharpCourseOOP\CsharpCourseOOP\result.txt", false))
+                {
+                    sw.WriteLine(allStockMoney());
+                }
+            }
             
-            var allStockMoney = firstStockAdding + secondStockAdding;
-            Console.WriteLine($"второе поступление товара на склад на сумму {secondStockAdding}. Теперь на складе товара в сумме на {allStockMoney}");
+            Thread thread = new Thread(new ThreadStart(SaveFileResult));
+            thread.Start();
+
+            async Task allStockMoneyAsync()
+            {
+                await Task.Run(() => allStockMoney());
+            }
+
+            allStockMoneyAsync();
         }
     }
 
